@@ -1,0 +1,24 @@
+# Environment files (contains API keys)
+.env
+.env.local
+.env.production
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# Vector store cache (if using persistent storage)
+vector_cache/
+faiss_index/
+chroma_db/
+
+# Streamlit cache
+.streamlit/
