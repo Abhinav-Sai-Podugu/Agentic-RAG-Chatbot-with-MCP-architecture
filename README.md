@@ -7,26 +7,26 @@ An intelligent document Q&A system built with Agent-Based Architecture and Model
 
 ### 📚 Multi-Format Document Support
 
-✅ PDF - Extracts text from all pages
+- ✅ PDF - Extracts text from all pages
 
-✅ DOCX - Processes Word documents
+- ✅ DOCX - Processes Word documents
 
-✅ PPTX - Handles PowerPoint presentations
+- ✅ PPTX - Handles PowerPoint presentations
 
-✅ CSV - Intelligent row grouping and header processing
+- ✅ CSV - Intelligent row grouping and header processing
 
-✅ TXT/Markdown - Smart paragraph and section-based chunking
+- ✅ TXT/Markdown - Smart paragraph and section-based chunking
 
 
 ## 🏗️ Agentic Architecture
 
 Three specialized agents communicate via Model Context Protocol (MCP):
 
-📝 IngestionAgent - Parses and preprocesses documents
+- IngestionAgent - Parses and preprocesses documents
 
-🔍 RetrievalAgent - Handles embeddings and semantic search
+- RetrievalAgent - Handles embeddings and semantic search
 
-🤖 LLMResponseAgent - Generates contextual responses
+- LLMResponseAgent - Generates contextual responses
 
 
 ## 🔄 Model Context Protocol (MCP)
@@ -135,20 +135,20 @@ agentic_rag_chatbot/
 
 ## 🚀 Quick Setup
 
-1. Clone Repository
+### 1. Clone Repository
    
 ```bash
 git clone https://github.com/yourusername/agentic-rag-chatbot.git
 cd agentic-rag-chatbot
 ```
 
-2. Install Dependencies
+### 2. Install Dependencies
    
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Environment Setup
+### 3. Environment Setup
 
    Create a .env file:
    
@@ -160,7 +160,7 @@ cp .env.example .env
 OPENROUTER_API_KEY=your_openrouter_api_key_here
 ```
 
-4. Run Application
+### 4. Run Application
 
 ```bash
 # Using run.py
@@ -170,9 +170,9 @@ python run.py
 streamlit run ui/app.py
 ```
 
-5. Access Application
-
-Open your browser and navigate to: http://localhost:8501
+### 5. Access Application
+  
+   Open your browser and navigate to: http://localhost:8501
 
 📋 Requirements
 
@@ -188,9 +188,9 @@ numpy>=1.24.0
 python-dotenv>=1.0.0
 ```
 
-🔧 Configuration
+## 🔧 Configuration
 
-Environment Variables
+### Environment Variables
 
 Create a .env file with:
 
@@ -206,7 +206,7 @@ CHUNK_SIZE=500
 CHUNK_OVERLAP=50
 ```
 
-Supported LLM Models
+### Supported LLM Models
 
 The system uses OpenRouter API and supports:
 
@@ -215,3 +215,58 @@ The system uses OpenRouter API and supports:
 - anthropic/claude-instant-v1
 
 - And many more available through OpenRouter (Preffered: Use lighter models)
+
+
+## 💻 Usage
+
+### Basic Workflow
+
+1. Upload Documents
+
+- Use the sidebar to upload multiple files
+
+- Supported formats: PDF, DOCX, PPTX, CSV, TXT, MD
+
+
+2. Ask Questions
+
+- Type your question in the chat input
+
+- The system will process through all agents
+
+- Get responses with source attribution
+
+
+3. View Agent Communication
+
+- Toggle "Show MCP Message Flow" in sidebar
+
+- See real-time agent interactions
+
+- Expand message details for debugging
+
+### Example Queries
+
+```bash
+"What are the key metrics mentioned in the quarterly report?"
+"Summarize the main points from the presentation slides"
+"What data trends can you identify from the CSV file?"
+"Compare the findings across all uploaded documents"
+```
+
+## 🛠️ Advanced Features
+
+### MCP Message Tracing
+
+Every operation is tracked with unique trace IDs:
+- Monitor agent communication flow
+- Debug processing pipeline
+- Ensure message delivery
+
+### Intelligent Document Chunking
+
+- PDF: Page-based extraction with smart chunking
+- DOCX: Paragraph-aware processing
+- PPTX: Slide-based segmentation
+- CSV: Header-aware row grouping
+- TXT/MD: Section and paragraph-based splitting
