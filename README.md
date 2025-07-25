@@ -150,7 +150,7 @@ pip install -r requirements.txt
 
 ### 3. Environment Setup
 
-   Create a .env file:
+####   Create a .env file:
    
 ```bash
 # Copy example environment file
@@ -172,7 +172,7 @@ streamlit run ui/app.py
 
 ### 5. Access Application
   
-   Open your browser and navigate to: http://localhost:8501
+####   Open your browser and navigate to: http://localhost:8501
 
 📋 Requirements
 
@@ -192,7 +192,7 @@ python-dotenv>=1.0.0
 
 ### Environment Variables
 
-Create a .env file with:
+#### Create a .env file with:
 
 ```bash
 # Required: OpenRouter API Key for LLM access
@@ -208,7 +208,7 @@ CHUNK_OVERLAP=50
 
 ### Supported LLM Models
 
-The system uses OpenRouter API and supports:
+#### The system uses OpenRouter API and supports:
 
 - mistralai/mistral-7b-instruct (default)
 
@@ -228,6 +228,8 @@ The system uses OpenRouter API and supports:
 - Supported formats: PDF, DOCX, PPTX, CSV, TXT, MD
 
 
+
+
 2. Ask Questions
 
 - Type your question in the chat input
@@ -235,6 +237,8 @@ The system uses OpenRouter API and supports:
 - The system will process through all agents
 
 - Get responses with source attribution
+
+
 
 
 3. View Agent Communication
@@ -258,7 +262,7 @@ The system uses OpenRouter API and supports:
 
 ### MCP Message Tracing
 
-Every operation is tracked with unique trace IDs:
+#### Every operation is tracked with unique trace IDs:
 - Monitor agent communication flow
 - Debug processing pipeline
 - Ensure message delivery
@@ -310,7 +314,7 @@ pip install -r requirements.txt
 
 ### Debug Mode
 
-Enable detailed logging:
+#### Enable detailed logging:
 
 ```bash
 import logging
@@ -376,4 +380,4 @@ python -m pytest tests/
 - Streamlit - Web framework
 - Hugging Face - AI model ecosystem
 
-Star ⭐ this repository if you find it helpful!
+## Star ⭐ this repository if you find it helpful!
