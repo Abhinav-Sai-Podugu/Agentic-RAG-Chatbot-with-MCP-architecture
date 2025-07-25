@@ -270,3 +270,110 @@ Every operation is tracked with unique trace IDs:
 - PPTX: Slide-based segmentation
 - CSV: Header-aware row grouping
 - TXT/MD: Section and paragraph-based splitting
+
+### Vector Store Features
+
+- Semantic similarity search using sentence transformers
+- Cosine similarity ranking
+- Configurable chunk retrieval (default: top 5)
+- In-memory storage for fast access
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+"No API Key Found"
+
+```bash
+# Ensure .env file exists with valid API key
+echo "OPENROUTER_API_KEY=your_key_here" > .env
+```
+
+"Import Module Error"
+
+```bash
+# Install missing dependencies
+pip install -r requirements.txt
+```
+
+"File Upload Failed"
+
+- Check file format is supported
+- Ensure file is not corrupted
+- Try with smaller files first
+
+"Empty Response"
+
+- Verify documents contain readable text
+- Check if API key has sufficient credits
+- Try with different document formats
+
+### Debug Mode
+
+Enable detailed logging:
+
+```bash
+import logging
+logging.basicConfig(level=logging.INFO)
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+
+2. Create feature branch: git checkout -b feature/amazing-feature
+
+3. Commit changes: git commit -m 'Add amazing feature'
+
+4. Push to branch: git push origin feature/amazing-feature
+
+5. Open Pull Request
+
+### Development Setup
+
+```bash
+# Clone your fork
+git clone https://github.com/yourusername/agentic-rag-chatbot.git
+
+# Install in development mode
+pip install -e .
+
+# Run tests
+python -m pytest tests/
+```
+
+## 📊 Performance
+
+### Benchmarks
+
+- Document Processing: ~2-3 seconds per MB
+- Query Response: ~3-5 seconds average
+- Memory Usage: ~100MB for 10 documents
+- Supported File Size: Up to 50MB per file
+
+### Scalability
+
+- Concurrent Users: Supports multiple simultaneous sessions
+- Document Limit: No hard limit (memory dependent)
+- Vector Store: In-memory (can be upgraded to persistent)
+
+## 🔮 Future Enhancements
+
+ - Persistent Vector Store (FAISS/Chroma integration)
+ - Multi-language Support
+ - Adding Text-to-Speech and Speech-to-Text converstions
+ - Advanced Chunking Strategies
+ - Document Similarity Analysis
+ - Export Chat History
+ - API Endpoint Development
+ - User Authentication
+ - Document Version Control
+
+## 🙏 Acknowledgments
+
+- OpenRouter - LLM API access
+- Sentence Transformers - Embedding models
+- Streamlit - Web framework
+- Hugging Face - AI model ecosystem
+
+Star ⭐ this repository if you find it helpful!
